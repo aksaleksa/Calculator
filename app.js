@@ -68,115 +68,112 @@ function operate(param1, param2, operator) {
     return output
 }
 
+const operators = ["+", "-", "*", "/"];
 
-// function updateDisplay(button, displayValue) {
-//     displayValue += button.textContent;
-//     screen.textContent = displayValue;
+
+// function updateNumber(number, condition) {
+//     if (operators.includes(screen.textContent)) screen.textContent = "";
+//     screen.textContent += number.textContent;
+//     // screen.textContent = display;
+//     condition = false;
+// }
+
+// function updateOperator(parameter, condition, operator, sign) {
+//     parameter = screen.textContent;
+//     //console.log(parameter);
+//     screen.textContent = sign;
+//     operator = sign;
+//     condition = true;
 // }
 
 function display() {
-    let displayValue = "";
+    //let displayValue = "";
     let param1 = "";
     let param2 = "";
     let result = "";
     let operator = "";
-    let firstReceived = false;
+    //let second = false;
+
     one.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += one.textContent 
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += one.textContent;
     })
     two.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += two.textContent;
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += two.textContent;
     })
     three.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += three.textContent;
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += three.textContent;
     })
     four.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += four.textContent;
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += four.textContent;
     })
     five.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += five.textContent;
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += five.textContent;
     })
     six.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += six.textContent;
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += six.textContent;
     })
     seven.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += seven.textContent;
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += seven.textContent;
     })
     eight.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += eight.textContent;
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += eight.textContent;
     })
     nine.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += nine.textContent;
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += nine.textContent;
     })
     zero.addEventListener("click", () => {
-        if (firstReceived) displayValue = "";
-        displayValue += zero.textContent;
-        screen.textContent = displayValue;
-        firstReceived = false;
+        if (operators.includes(screen.textContent)) screen.textContent = "";
+        screen.textContent += zero.textContent;
     })
+
+    //one.addEventListener("click", () => updateNumber(one, second));
+    //two.addEventListener("click", () => updateNumber(two, second));
+    // three.addEventListener("click", () => updateNumber(three, displayValue, second))
+    // four.addEventListener("click", () => updateNumber(four, displayValue, second))
+    // five.addEventListener("click", () => updateNumber(five, displayValue, second))
+    // six.addEventListener("click", () => updateNumber(six, displayValue, second))
+    // seven.addEventListener("click", () => updateNumber(seven, displayValue, second))
+    // eight.addEventListener("click", () => updateNumber(eight, displayValue, second))
+    // nine.addEventListener("click", () => updateNumber(nine, displayValue, second))
+    // zero.addEventListener("click", () => updateNumber(zero, displayValue, second))
+
     plus.addEventListener("click", () => {
-        param1 = displayValue;
-        displayValue = plus.textContent;
-        screen.textContent = displayValue;
-        firstReceived = true;
+        param1 = screen.textContent;
+        screen.textContent = "+";
         operator = "+";
     })
     minus.addEventListener("click", () => {
-        param1 = displayValue;
-        displayValue = minus.textContent;
-        screen.textContent = displayValue;
-        firstReceived = true;
+        param1 = screen.textContent;
+        screen.textContent = "-";
         operator = "-";
     })
     times.addEventListener("click", () => {
-        param1 = displayValue;
-        displayValue = times.textContent;
-        screen.textContent = displayValue;
-        firstReceived = true;
+        param1 = screen.textContent;
+        screen.textContent = "*";
         operator = "*";
     })
     divide.addEventListener("click", () => {
-        param1 = displayValue;
-        displayValue = divide.textContent;
-        screen.textContent = displayValue;
-        firstReceived = true;
+        param1 = screen.textContent;
+        screen.textContent = "/";
         operator = "/";
     })
+    
     equals.addEventListener("click", () => {
-        param2 = displayValue;
+        param2 = screen.textContent;
         result = operate(param1, param2, operator);
         screen.textContent = result;
     })
     clear.addEventListener("click", () => {
         screen.textContent = "";
-        displayValue = "";
         param1 = "";
         param2 = "";
         operator = "";
@@ -184,3 +181,29 @@ function display() {
 }
 
 display();
+
+// one.addEventListener("click", () => {
+//     if (second) displayValue = "";
+//     displayValue += one.textContent;
+//     screen.textContent = displayValue;
+//     second = false;
+// })
+// two.addEventListener("click", () => {
+//     if (second) displayValue = "";
+//     displayValue += two.textContent;
+//     screen.textContent = displayValue;
+//     second = false;
+// })
+
+//plus.addEventListener("click", () => {updateOperator(param1, second, operator, "+")})
+//minus.addEventListener("click", () => updateOperator(param1, second, operator, minus));
+//times.addEventListener("click", () => updateOperator(param1, second, operator, times));
+//divide.addEventListener("click", () => updateOperator(param1, second, operator, divide));
+
+// plus.addEventListener("click", () => {
+//     param1 = screen.textContent;
+//     //displayValue = plus.textContent;
+//     screen.textContent = plus.textContent;
+//     second = true;
+//     operator = "+";
+// })
