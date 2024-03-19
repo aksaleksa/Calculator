@@ -8,7 +8,10 @@
 </head>
 <body>
     <div id="calculator-body">
-        <div id="screen"></div>
+        <div id="screen">
+            <div id="top-display"></div>
+            <div id="main-display"></div>
+        </div>
         <div id="delete">
             <div id="backspace">Backspace</div>
             <div id="clear">Clear</div>
@@ -45,6 +48,16 @@
                 <div id="log" value ="ln">ln(x)</div>
             </div>
         </div>
+    </div>
+    <div id="instructions">
+        <h2>Keyboard Shortcuts</h2>
+        <ul>
+            <li><b>b</b> -- Backspace</li>
+            <li><b>c</b> -- Clear</li>
+            <li><b>Enter / =</b> -- Equals</li>
+            <li><b>^, +, -, * & /</b> - Same as on the calculator</li>
+            <li><b>√, e<sup>x</sup></span> and ln(x)</b> work by selecting a number first and then clicking the symbol.</li>
+        </ul>
     </div>
     <script src="app.js"></script>
 </body>
